@@ -1,0 +1,15 @@
+[Unit]
+Description=DoAide PaySlip Web
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/doaide-payslip/frontend
+ExecStart=/usr/bin/npx serve -s dist -l 3082
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
