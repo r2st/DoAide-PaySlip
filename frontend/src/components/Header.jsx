@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { path: '/ctc-breakdown', label: 'CTC Breakdown' },
   { path: '/batch', label: 'Batch' },
   { path: '/professional-tax', label: 'Professional Tax' },
+  { path: '/blog', label: 'Blog' },
 ]
 
 export default function Header() {
