@@ -27,7 +27,7 @@ const POSTS = [
 
 export default function Blog() {
   useEffect(() => {
-    document.title = 'Blog — Payslip, Salary & Tax Guides for Indian Employees | PaySlipMaker'
+    document.title = 'Blog — Payslip, Salary & Tax Guides for Indian Employees | DoAide PaySlip'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content', 'Guides on payslip format, salary structure, CTC breakdown, Form 16, and tax filing for Indian employees and small businesses.')
   }, [])
@@ -35,8 +35,8 @@ export default function Blog() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <header className="mb-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-        <p className="text-lg text-gray-600">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Blog</h1>
+        <p className="text-lg text-gray-600 dark:text-slate-400">
           Guides on payslip formats, salary structure, CTC breakdown, tax filing, and everything
           Indian employees and HR professionals need to know about payroll.
         </p>
@@ -47,13 +47,13 @@ export default function Blog() {
           <Link
             key={post.slug}
             to={post.slug}
-            className="block bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-primary-200 transition-all group"
+            className="block bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 hover:shadow-md hover:border-primary-200 dark:hover:border-primary-700 transition-all group"
           >
-            <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
               {post.title}
             </h2>
-            <p className="text-gray-600 text-sm mb-3">{post.description}</p>
-            <div className="flex items-center gap-4 text-xs text-gray-500">
+            <p className="text-gray-600 dark:text-slate-400 text-sm mb-3">{post.description}</p>
+            <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-slate-500">
               <span>{post.date}</span>
               <span>{post.readTime}</span>
             </div>

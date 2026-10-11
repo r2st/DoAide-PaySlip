@@ -24,13 +24,13 @@ export default function ProfessionalTax() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Professional Tax by State</h1>
-        <p className="text-gray-600 mt-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Professional Tax by State</h1>
+        <p className="text-gray-600 dark:text-slate-400 mt-2">
           Check the professional tax rates applicable in your Indian state for payslip deductions.
         </p>
       </div>
 
-      <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+      <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-8">
         <label className="block text-sm font-medium text-gray-700 mb-2">Select State / UT</label>
         <select
           value={selectedState}
@@ -49,7 +49,7 @@ export default function ProfessionalTax() {
       )}
 
       {result && !loading && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden">
           <div className="bg-primary-50 px-6 py-4 border-b border-primary-100">
             <h2 className="text-lg font-semibold text-primary-900">{result.state}</h2>
           </div>
@@ -78,7 +78,7 @@ export default function ProfessionalTax() {
       )}
 
       <div className="mt-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Professional Tax in India — Overview</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Professional Tax in India — Overview</h2>
         <div className="prose prose-sm max-w-none text-gray-600">
           <p>
             Professional Tax is a state-level tax levied on salaried individuals and professionals

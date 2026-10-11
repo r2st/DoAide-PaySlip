@@ -32,13 +32,13 @@ export default function CTCBreakdown() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">CTC Breakdown Calculator</h1>
-        <p className="text-gray-600 mt-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">CTC Breakdown Calculator</h1>
+        <p className="text-gray-600 dark:text-slate-400 mt-2">
           Enter your annual CTC to see the salary component breakdown using standard Indian ratios.
         </p>
       </div>
 
-      <form onSubmit={handleCalculate} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-8">
+      <form onSubmit={handleCalculate} className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Annual CTC (INR) <span className="text-red-500">*</span></label>
@@ -98,7 +98,7 @@ export default function CTCBreakdown() {
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
@@ -153,8 +153,8 @@ export default function CTCBreakdown() {
             </table>
           </div>
 
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-            <h3 className="font-semibold text-gray-800 mb-3">Employer Cost</h3>
+          <div className="bg-gray-50 dark:bg-slate-800 rounded-xl p-5 border border-gray-200 dark:border-slate-700">
+            <h3 className="font-semibold text-gray-800 dark:text-white mb-3">Employer Cost</h3>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <span className="text-gray-600">Employer PF:</span>

@@ -8,7 +8,7 @@ const TEMPLATES = [
   {
     id: 'corporate',
     name: 'Corporate',
-    description: 'Formal design with dark header and gold accents',
+    description: 'Formal design with dark header and teal accents',
     color: 'bg-gray-800',
   },
   {
@@ -29,15 +29,15 @@ export default function TemplateSelector({ selected, onSelect }) {
           onClick={() => onSelect(t.id)}
           className={`p-4 rounded-xl border-2 transition-all text-left ${
             selected === t.id
-              ? 'border-primary-500 bg-primary-50 shadow-md'
-              : 'border-gray-200 bg-white hover:border-gray-300'
+              ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20 shadow-md'
+              : 'border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 hover:border-gray-300 dark:hover:border-slate-500'
           }`}
         >
           <div className="flex items-center gap-3 mb-2">
             <div className={`w-4 h-4 rounded ${t.color}`} />
-            <span className="font-semibold text-gray-900">{t.name}</span>
+            <span className="font-semibold text-gray-900 dark:text-white">{t.name}</span>
           </div>
-          <p className="text-xs text-gray-500">{t.description}</p>
+          <p className="text-xs text-gray-500 dark:text-slate-400">{t.description}</p>
         </button>
       ))}
     </div>

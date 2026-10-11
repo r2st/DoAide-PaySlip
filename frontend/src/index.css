@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --da-primary: #0D9488;
+    --da-primary-hover: #0F766E;
+    --da-bg: #FFFFFF;
+    --da-surface: #F8FFFE;
+    --da-text: #1E293B;
+    --da-text-secondary: #64748B;
+    --da-border: #E2E8F0;
+  }
+
+  .dark {
+    --da-bg: #0F172A;
+    --da-surface: #1E293B;
+    --da-text: #F1F5F9;
+    --da-text-secondary: #94A3B8;
+    --da-border: #334155;
+  }
+
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-gray-50 text-gray-900 antialiased font-sans;
+    background-color: var(--da-bg);
+    color: var(--da-text);
+  }
+
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
   }
 }

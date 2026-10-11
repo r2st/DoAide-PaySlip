@@ -97,13 +97,13 @@ export default function Batch() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Batch Payslip Generation</h1>
-        <p className="text-gray-600 mt-2">Generate payslips for multiple months at once. Downloads as a ZIP file.</p>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Batch Payslip Generation</h1>
+        <p className="text-gray-600 dark:text-slate-400 mt-2">Generate payslips for multiple months at once. Downloads as a ZIP file.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-8">
-        <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Company & Employee</h2>
+        <section className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Company & Employee</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField label="Company Name" value={form.company_name} onChange={e => updateField('company_name', e.target.value)} required placeholder="Acme Corp Pvt Ltd" />
             <FormField label="Company Address" value={form.company_address} onChange={e => updateField('company_address', e.target.value)} placeholder="Mumbai, India" />
@@ -116,8 +116,8 @@ export default function Batch() {
           </div>
         </section>
 
-        <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Select Months</h2>
+        <section className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Select Months</h2>
           <div className="flex gap-2 mb-4">
             <FormField label="Year" type="number" value={year} onChange={e => setYear(e.target.value)} min={2000} max={2100} />
           </div>
@@ -155,8 +155,8 @@ export default function Batch() {
           )}
         </section>
 
-        <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Earnings (Monthly)</h2>
+        <section className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Earnings (Monthly)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField label="Basic Salary" type="number" value={form.earnings.basic_salary} onChange={e => updateEarnings('basic_salary', e.target.value)} required min={0} placeholder="40000" />
             <FormField label="HRA" type="number" value={form.earnings.hra} onChange={e => updateEarnings('hra', e.target.value)} min={0} placeholder="20000" />
@@ -167,8 +167,8 @@ export default function Batch() {
           </div>
         </section>
 
-        <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Deductions (Monthly)</h2>
+        <section className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Deductions (Monthly)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField label="PF" type="number" value={form.deductions.provident_fund} onChange={e => updateDeductions('provident_fund', e.target.value)} min={0} placeholder="4800" />
             <FormField label="ESI" type="number" value={form.deductions.esi} onChange={e => updateDeductions('esi', e.target.value)} min={0} placeholder="0" />
@@ -177,8 +177,8 @@ export default function Batch() {
           </div>
         </section>
 
-        <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Template</h2>
+        <section className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-slate-700">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Template</h2>
           <TemplateSelector selected={form.template} onSelect={t => updateField('template', t)} />
         </section>
 
