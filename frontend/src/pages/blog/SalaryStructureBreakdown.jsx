@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useSEO from '../../utils/useSEO'
 
 const STRUCTURED_DATA = [
   {
@@ -65,20 +65,7 @@ const STRUCTURED_DATA = [
 ]
 
 export default function SalaryStructureBreakdown() {
-  useEffect(() => {
-    document.title = 'Salary Structure Breakdown in India: CTC, Gross & Net Pay Guide | PaySlipMaker'
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) meta.setAttribute('content', 'Complete guide to Indian salary structure. Understand CTC vs gross vs net salary, Basic Pay, HRA, DA, PF, ESI, and how each component is calculated.')
-
-    const scripts = STRUCTURED_DATA.map(data => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
-    })
-    return () => scripts.forEach(s => s.remove())
-  }, [])
+  useSEO({ jsonLd: STRUCTURED_DATA })
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

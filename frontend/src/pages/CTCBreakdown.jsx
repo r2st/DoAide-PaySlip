@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import useSEO from '../utils/useSEO'
 import { calculateCTCBreakdown } from '../utils/api'
 
 export default function CTCBreakdown() {
+  useSEO()
   const [ctc, setCTC] = useState('')
   const [includeESI, setIncludeESI] = useState(false)
   const [result, setResult] = useState(null)

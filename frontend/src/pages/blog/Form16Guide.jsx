@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useSEO from '../../utils/useSEO'
 
 const STRUCTURED_DATA = [
   {
@@ -65,20 +65,7 @@ const STRUCTURED_DATA = [
 ]
 
 export default function Form16Guide() {
-  useEffect(() => {
-    document.title = 'Form 16 Guide for Salaried Employees in India | PaySlipMaker'
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) meta.setAttribute('content', 'Complete guide to Form 16 in India. Understand Part A, Part B, how to use it for ITR filing, deadlines, and what to do if your employer doesn\'t provide it.')
-
-    const scripts = STRUCTURED_DATA.map(data => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
-    })
-    return () => scripts.forEach(s => s.remove())
-  }, [])
+  useSEO({ jsonLd: STRUCTURED_DATA })
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -226,7 +213,7 @@ export default function Form16Guide() {
           your ITR using the following alternative documents:
         </p>
         <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Monthly payslips:</strong> Sum up the 12 monthly payslips to get annual figures for each salary component and deduction. <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">PaySlipMaker</Link> can help you create organized payslips for record-keeping.</li>
+          <li><strong>Monthly payslips:</strong> Sum up the 12 monthly payslips to get annual figures for each salary component and deduction. <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">DoAide PaySlip</Link> can help you create organized payslips for record-keeping.</li>
           <li><strong>Form 26AS:</strong> Available on the Income Tax e-filing portal, this shows all TDS credits against your PAN. Download it and use the quarterly TDS figures for your ITR.</li>
           <li><strong>AIS (Annual Information Statement):</strong> A newer, more comprehensive document that shows salary, TDS, interest income, capital gains, and other financial transactions reported to the IT department.</li>
           <li><strong>Bank statements:</strong> Your salary credits can be used to verify the gross salary amounts and compute approximate annual income.</li>

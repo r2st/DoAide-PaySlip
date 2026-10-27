@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useSEO from '../utils/useSEO'
 import FormField from '../components/FormField'
 import TemplateSelector from '../components/TemplateSelector'
 import { generatePayslip, downloadBlob } from '../utils/api'
@@ -39,6 +40,7 @@ const INITIAL_STATE = {
 }
 
 export default function Generator() {
+  useSEO()
   const [form, setForm] = useState(INITIAL_STATE)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')

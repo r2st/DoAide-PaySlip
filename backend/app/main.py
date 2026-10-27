@@ -9,7 +9,7 @@ from .pdf_generator import generate_payslip
 from .ctc_calculator import calculate_ctc_breakdown
 
 app = FastAPI(
-    title="PaySlipMaker API",
+    title="DoAide PaySlip API",
     description="Free Salary Slip Generator for Indian Employees",
     version="1.0.0",
 )

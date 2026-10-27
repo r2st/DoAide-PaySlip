@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import useSEO from '../utils/useSEO'
 import { getProfessionalTax } from '../utils/api'
 import { INDIAN_STATES } from '../utils/indianStates'
 
 export default function ProfessionalTax() {
+  useSEO()
   const [selectedState, setSelectedState] = useState('')
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)

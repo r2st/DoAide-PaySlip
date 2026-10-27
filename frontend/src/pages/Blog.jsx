@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useSEO from '../utils/useSEO'
 
 const POSTS = [
   {
@@ -26,11 +26,7 @@ const POSTS = [
 ]
 
 export default function Blog() {
-  useEffect(() => {
-    document.title = 'Blog — Payslip, Salary & Tax Guides for Indian Employees | DoAide PaySlip'
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) meta.setAttribute('content', 'Guides on payslip format, salary structure, CTC breakdown, Form 16, and tax filing for Indian employees and small businesses.')
-  }, [])
+  useSEO()
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

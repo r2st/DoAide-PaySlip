@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useSEO from '../../utils/useSEO'
 
 const STRUCTURED_DATA = [
   {
@@ -49,7 +49,7 @@ const STRUCTURED_DATA = [
         "name": "How can I generate a payslip online for free?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can use PaySlipMaker at payslip.doaide.com to generate professional payslips for free. Enter company and employee details, select a template (Standard, Corporate, or Modern), and download the payslip as a PDF instantly — no login or payment required."
+          "text": "You can use DoAide PaySlip at payslip.doaide.com to generate professional payslips for free. Enter company and employee details, select a template (Standard, Corporate, or Modern), and download the payslip as a PDF instantly — no login or payment required."
         }
       },
       {
@@ -65,20 +65,7 @@ const STRUCTURED_DATA = [
 ]
 
 export default function PayslipFormatIndia() {
-  useEffect(() => {
-    document.title = 'Payslip Format in India: Complete Guide to Salary Slip Components (2025-26) | PaySlipMaker'
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) meta.setAttribute('content', 'Understand the standard payslip format used in India. Learn about mandatory fields, earnings, deductions, and how to read your salary slip correctly.')
-
-    const scripts = STRUCTURED_DATA.map(data => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(data)
-      document.head.appendChild(script)
-      return script
-    })
-    return () => scripts.forEach(s => s.remove())
-  }, [])
+  useSEO({ jsonLd: STRUCTURED_DATA })
 
   return (
     <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -217,7 +204,7 @@ export default function PayslipFormatIndia() {
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Generate Your Payslip for Free</h2>
         <p className="text-gray-700 mb-4">
           If you are a small business owner, freelancer, or HR professional looking to create professional
-          payslips without expensive payroll software, <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">PaySlipMaker</Link> lets
+          payslips without expensive payroll software, <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">DoAide PaySlip</Link> lets
           you generate salary slips instantly. Choose from Standard, Corporate, or Modern templates, enter
           company and employee details, and download a polished PDF — completely free, with no login required.
         </p>
@@ -258,7 +245,7 @@ export default function PayslipFormatIndia() {
           <div className="bg-gray-50 rounded-lg p-6">
             <h3 className="font-semibold text-gray-900 mb-2">How can I generate a payslip online for free?</h3>
             <p className="text-gray-700">
-              You can use <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">PaySlipMaker</Link> at payslip.doaide.com
+              You can use <Link to="/generator" className="text-primary-600 hover:text-primary-800 font-medium">DoAide PaySlip</Link> at payslip.doaide.com
               to generate professional payslips for free. Enter company and employee details, select a template, and
               download the payslip as a PDF instantly — no login or payment required.
             </p>

@@ -26,38 +26,23 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://payslip.doaide.com/professional-tax/maharashtra</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://payslip.doaide.com/blog</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://payslip.doaide.com/professional-tax/karnataka</loc>
+    <loc>https://payslip.doaide.com/blog/payslip-format-india</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://payslip.doaide.com/professional-tax/tamil-nadu</loc>
+    <loc>https://payslip.doaide.com/blog/salary-structure-breakdown</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://payslip.doaide.com/professional-tax/telangana</loc>
+    <loc>https://payslip.doaide.com/blog/form-16-guide</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://payslip.doaide.com/professional-tax/west-bengal</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://payslip.doaide.com/professional-tax/gujarat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://payslip.doaide.com/professional-tax/andhra-pradesh</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

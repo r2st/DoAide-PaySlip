@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import useSEO from '../utils/useSEO'
 import FormField from '../components/FormField'
 import TemplateSelector from '../components/TemplateSelector'
 import { generateBatch, downloadBlob } from '../utils/api'
@@ -8,6 +9,7 @@ const currentDate = new Date()
 const CURRENT_YEAR = currentDate.getFullYear()
 
 export default function Batch() {
+  useSEO()
   const [form, setForm] = useState({
     company_name: '',
     company_address: '',

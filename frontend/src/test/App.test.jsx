@@ -12,9 +12,9 @@ function renderApp() {
 }
 
 describe('App', () => {
-  it('renders the header with PaySlipMaker', () => {
+  it('renders the header with DoAide PaySlip branding', () => {
     renderApp()
-    expect(screen.getAllByText('Maker').length).toBeGreaterThanOrEqual(1)
+    expect(screen.getAllByText(/PaySlip/).length).toBeGreaterThanOrEqual(1)
   })
 
   it('renders navigation links', () => {
